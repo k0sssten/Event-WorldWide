@@ -1,0 +1,9 @@
+.containerSignUp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapperEntranceUser {
+    margin-top: 50px;
+}

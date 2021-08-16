@@ -1,0 +1,267 @@
+.sectionPersonalArea {
+    padding-top: 30px;
+}
+
+.containerPersonalData {
+    display: flex;
+    flex-direction: column;
+    max-width: 750px;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 0;
+    padding-top: 50px;
+}
+
+.containerPersonalData2 {
+  padding-top: 0;
+}
+
+.personalData_avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.personalData_avatar form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.personalData_name {
+    margin-top: 10px;
+    font-size: 30px;
+    line-height: 27px;
+}
+
+.formPersonalData_generalInformation {
+    border-radius: 5px;
+}
+
+.fon {
+    background: rgba(0, 0, 0, 0.45);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/* .personalData_imgContent {
+    opacity: 0;
+} */
+
+.personalDat_updateImg  .updateImg{
+    position: relative;
+    width: 39px;
+    height: 30px;
+    background-image: url('./img/camera.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.personalDat_FileInput {
+    cursor: pointer;
+}
+
+.personalDat_FileInput[type="file"] {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.personalDat_FileInput[type="file"]::-webkit-file-upload-button {
+    cursor:pointer;
+}
+
+.personalData_imgBg {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #ccc;
+    background-image: url('https://www.gravatar.com/avatar/1336aff9fea5221a52cbae53e5eb061c?size=200&d=https%3A%2F%2Fsalesforce-developer.ru%2Fwp-content%2Fuploads%2Favatars%2Fno-avatar.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+/* .personalData_imgBg > img {
+  width: 100%;
+  height: 100%;
+} */
+
+.personalData_imgBg:hover > .personalDat_updateImg {
+    transform: translateY(0);
+}
+
+.personalDat_updateImg {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    transform: translateY(100%);
+    transition: 0.4s;
+}
+
+.blockPersonalData_country {
+    display: flex;
+}
+
+.labelFormPersonalData {
+    width: 140px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.labelFormPersonalData::after {
+    content: "*";
+    display: inline-block;
+    height: 15px;
+    margin-left: 4px;
+    color: #ff504f;
+}
+
+.formPersonalDataText {
+    font-size: 17px;
+    line-height: 14px;
+    font-weight: 700;
+    color: #000;
+}
+
+.personalDataItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.personalDataItem:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+.wrapperPassword {
+    position: relative;
+}
+
+.hidePassword {
+    position: absolute;
+    right: 15px;
+    top: 19px;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-image: url('./img/view_hide_icon_password.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.showPassword {
+    background-image: url('./img/gui_view_show_icon_password.svg');
+}
+
+.blockPersonalDataText {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    font-size: 17px;
+    line-height: 20px;
+    margin-top: 8px;
+    padding: 10px 15px;
+    outline: none;
+}
+
+.blockPersonalDataText.showEdit {
+    background-color: #dfe0e3;
+    border: solid 1px #ff504f;
+}
+
+.blockPersonalDataText.sity {
+    position: relative;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.blockPersonalDataText.sity::after {
+    content: '🠻';
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 30px;
+    background-color: #002e66;
+    color: #0eafaa;
+    font-size: 33px;
+}
+
+.CountrySelect {
+    position: absolute;
+    width: 100%;
+    height: 180px;
+    overflow: auto;
+    box-shadow: 0px 2px 3px rgb(0 0 0 / 20%);
+}
+
+.wrapperSelectCountry {
+    position: relative;
+}
+
+.blockPersonalDataSubmit, .submitImg {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 40px;
+    margin-top: 15px;
+    margin-right: 10px;
+    padding: 0 12px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: #0076ff;
+    border-radius: 3px;
+    color: #fff;
+    border: none;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.submitImg {
+    margin-right: 0;
+}
+
+.blockPersonalDataSubmit:hover {
+    background-color: #1e95f1;
+}
+
+.blockPersonalDataEdit, .submitImg {
+    background-color: #0eafaa;
+    color: #fff;
+}
+
+/* .blockPersonalDataEdit:hover {
+    background-color: #ffaa55;
+} */
+
+.personalAreaTitle {
+    text-align: center;
+    background-color: #002e66;
+    padding: 15px 25px;
+    border-bottom: 5px solid #0eafaa;
+    color: #fff;
+    font-size: 30px;
+}
+
+.personalAreaContent {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}

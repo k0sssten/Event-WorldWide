@@ -1,0 +1,41 @@
+.QuickSearchContainer {
+  max-width: 850px;
+  padding: 0;
+  padding-top: 50px;
+}
+
+.QuickSearchContainer > form{
+  padding: 20px;
+  background-color: #fff;
+}
+
+.QuickSearchContainer > form > div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+/* .QuickSearchContainer > form > div:last-of-type > div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+} */
+
+.QuickSearchContainer > form > div:not(:last-of-type) {
+    margin-bottom: 13px;
+}
+
+.QuickSearchContainer > form > div > div:first-of-type {
+    max-width: 130px;
+    text-align: left;
+    margin-left: 0;
+}
+
+.QuickSearchContainer > form > div > div:first-of-type > label {
+    height: inherit;
+}
+
+.QuickSearchContainer > form > div > div:nth-child(2) {
+    margin-top: 5px;
+    max-width: 100%;
+}

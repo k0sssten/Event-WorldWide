@@ -1,0 +1,53 @@
+@font-face {
+	font-family: 'Knockout-46';
+	src: url('../Fonts/Knockout-46FlyWeight/Knockout-46FlyWeight.otf') format('otf'),
+		url('../Fonts/Knockout-46FlyWeight/Knockout-46FlyWeight.woff') format('woff'),
+        url('../Fonts/Knockout-46FlyWeight/Knockout-46FlyWeight.woff2') format('woff2');
+	font-display: swap;
+	font-weight: 500;
+	font-style: normal;
+}
+
+.containerDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.sectionDescriptionProject {
+    height: 100vh;
+    background: linear-gradient(to right, rgba(0,0,0,.4), rgba(0,0,0,.4)), url('./img/dostoprimechatelnosti-world.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sectionDescriptionTitle {
+    display: inline-block;
+    width: fit-content;
+    background-color: rgba(14, 175, 170, 0.6);
+    color: #fff;
+    padding: 15px;
+    font-size: 85px;
+    line-height: 65px;
+    font-family: 'Knockout-46';
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 400;
+    margin-left: 400px;
+    transition: 2s;
+    opacity: 0;
+}
+
+.sectionDescriptionText {
+    width: fit-content;
+    background-color: rgba(14, 175, 170, 0.6);
+    color: #fff;
+    padding: 0 15px;
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 400px;
+    transition: 2s;
+    opacity: 0;
+}

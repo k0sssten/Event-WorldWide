@@ -1,0 +1,5 @@
+export const GET_SUBCRIBE = 'ADD_SUBSCRIBE';
+export const ADD_SUBSCRIBE = 'ADD_SUBSCRIBE';
+export const DELETE_SUBSCRIBE = 'DELETE_SUBSCRIBE';
+export const CHANGE_STATUS = 'CHANGE_STATUS'
+

@@ -1,0 +1,10 @@
+.CountryOption {
+    background-color: #fff;
+    padding: 5px 8px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.CountryOption:hover {
+    background-color: #f4f7fb;
+}

@@ -1,0 +1,27 @@
+.PersonalAreaEventlistContainer {
+  width: 100%;
+  height: fit-content;
+  box-shadow: 0 0 30px rgb(0 0 0 / 15%);
+  padding: 0;
+  margin: 0;
+  margin-right: 20px;
+}
+.HeaderformTop {
+  margin-bottom: 0;
+}
+.wrapperEvents {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  padding-top: 50px;
+}
+.noEvents {
+  text-align: center;
+  font-weight: 700;
+  margin-top: 10px;
+  font-size: 18px;
+  background-color: #fff;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}

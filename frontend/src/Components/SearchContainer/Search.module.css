@@ -1,0 +1,39 @@
+.searchContainer {
+  max-width: 850px;
+  padding: 0;
+  padding-top: 50px;
+}
+
+.searchContainer > form{
+    padding: 20px;
+    background-color: #fff;
+}
+
+.QuickSearchEventList {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.searchContainer > form > div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.searchContainer > form > div:not(:last-of-type) {
+    margin-bottom: 13px;
+}
+
+.searchContainer > form > div > div:first-of-type {
+    max-width: 100px;
+    text-align: left;
+}
+
+.searchContainer > form > div > div:first-of-type > label {
+    height: inherit;
+}
+
+.searchContainer > form > div > div:nth-child(2) {
+    margin-top: 5px;
+    max-width: 100%;
+}

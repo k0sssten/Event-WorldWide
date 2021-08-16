@@ -1,0 +1,24 @@
+{
+  "development": {
+    "username": "kosappuser",
+    "password": "trin2021",
+    "database": "kosapp",
+    "host": "87.249.49.53",
+    "dialect": "postgres",
+    "port": "1212"
+  },
+  "test": {
+    "username": "kosappuser",
+    "password": "trin2021",
+    "database": "kosapp",
+    "host": "87.249.49.53",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "kosappuser",
+    "password": "trin2021",
+    "database": "kosapp",
+    "host": "87.249.49.53",
+    "dialect": "postgres"
+  }
+}
