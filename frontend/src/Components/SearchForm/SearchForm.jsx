@@ -26,8 +26,6 @@ function SearchForm() {
 
   const submitHandler = (formData) => {
     dispatch(getEventsByParams(formData))
-    // придумать как очищать форму после отправки данных
-    // setTodoInput('')
   }
 
 

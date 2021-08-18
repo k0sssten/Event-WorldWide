@@ -16,7 +16,6 @@ router
       const pass = await bcrypt.hash(password, 7);
         const createUser = await User.create({email, password: pass, Name: userName, City: city, Userphonenumber: phone}, {returning: true, plain: true});
         req.session.user = {id: createUser.id, name: createUser.Name};
-        console.log(req.session.user);
         return res.json({id: createUser.id, email: createUser.email, Name: createUser.Name, City: createUser.City, phone: createUser.Userphonenumber, password: password,  Userphoto: createUser.Userphoto})
       } catch (error) {
         return res.sendStatus(500)

@@ -3,7 +3,6 @@ import {
     ADD_ID,
     DELETE_USER,
     DELETE_ID_USER,
-    // ADD_USER_AVATAR
 } from '../types/userTypes'
 
 import initState from '../initState'

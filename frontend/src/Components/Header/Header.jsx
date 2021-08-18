@@ -34,13 +34,6 @@ function Header() {
   };
   useEffect(()=> {
     if(user.id) {
-      // localStorage.setItem('id', user.id)
-      // localStorage.setItem('Name', user.Name)
-      // localStorage.setItem('email', user.email)
-      // localStorage.setItem('City', user.City)
-      // localStorage.setItem('phone', user.Userphonenumber)
-      // localStorage.setItem('photo', user.Userphoto)
-      // localStorage.setItem('password', user.password)
     }
   },[user]);
 
@@ -49,7 +42,6 @@ function Header() {
 
 
   const showNavbar = () => {
-    console.log(menuNav.current)
     if (menuNavBar === false) {
       menuNav.current.style.right = '0'
       sandwitch_1.current.style.transform = "rotate(45deg)"

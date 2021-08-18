@@ -13,14 +13,12 @@ export const getFavouriteEvents = () => async (dispatch) => {
   dispatch(setAll(favouriteEvents.data))
 }
 
-
 export function deleteFavourite(id) {
   return {
     type: DELETE_FAV,
     payload: id
   }
 }
-
 
 export const removeFavourite = (id) => async (dispatch) => {
   await axios.delete('http://localhost:3001/api/v1/subscribes', { data: { id } });

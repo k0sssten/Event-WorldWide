@@ -6,16 +6,11 @@ import { useRef, useState, useCallback, useEffect } from 'react';
 import { useDropzone } from 'react-dropzone';
 import axios from 'axios';
 
-// const ImageThumb = ({ image, avatarUser }) => {
-//     return <img ref={avatarUser} className={style.userAvatar} src={URL.createObjectURL(image)} alt={image.name} />;
-// };
-
 function PersonalArea() {
   const [avatar, setAvatar] = useState(localStorage.photo);
 
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.user);
-  console.log(localStorage);
 
   const [buttonUpdate, setButtonUpdate] = useState(false);
   const [buttonEdit, setButtonEdit] = useState(true);
@@ -82,13 +77,6 @@ function PersonalArea() {
     }
   };
   useEffect(() => {
-    // localStorage.setItem('id', user.id);
-    // localStorage.setItem('Name', user.Name);
-    // localStorage.setItem('email', user.email);
-    // localStorage.setItem('City', user.City);
-    // localStorage.setItem('phone', user.Userphonenumber);
-    // localStorage.setItem('photo', user.Userphoto);
-    // localStorage.setItem('password', user.password);
   }, [user]);
 
   function MyDropzone() {
@@ -104,10 +92,8 @@ function PersonalArea() {
     }, []);
     const { getRootProps, getInputProps } = useDropzone({ onDrop });
     const img = localStorage.photo;
-    console.log(img)
     return (
       <div className={style.personalData_avatar} {...getRootProps()}>
-          {/* <img src={localStorage.photo} alt="" /> */}
           {img ? (
         <div className={style.personalData_imgBg} style={{backgroundImage: `url(${ img })`}}> 
             <div className={style.personalDat_updateImg} >

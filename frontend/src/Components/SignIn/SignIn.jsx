@@ -1,12 +1,9 @@
-// import style from './SignIn.module.css'
 import SignUp from '../SignUp/SignUp.module.css'
 import styleContainer from '../Container/container.module.css'
-
 import { useEffect, useState } from 'react'
 import { getFormUserDataAuth } from '../../redux/actions/userAC';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-
 function SignIn() {
     const dispatch = useDispatch()
     const history = useHistory();
@@ -35,17 +32,13 @@ function SignIn() {
         localStorage.setItem('phone', user.phone)
         localStorage.setItem('photo', user.Userphoto)
         localStorage.setItem('password', user.password)
-        // window.location.replace('http://localhost:3000/')
         HomeButton();
       }
     },[user]);
-
     const submitHandler = (event) => {
         event.preventDefault()
         dispatch(getFormUserDataAuth(inputEmail, inputPassword))
-        // HomeButton();
     }
-
     return (
         <>
             <div className={styleContainer.container + ' ' + SignUp.containerSignUp}>

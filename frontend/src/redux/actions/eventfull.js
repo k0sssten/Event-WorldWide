@@ -18,6 +18,5 @@ export const getEventsByParams = (formData) => async (dispatch) => {
   const eventsByParams = await axios(`https://app.ticketmaster.com/discovery/v2/events.json?apikey=${apikey}&countryCode=${countryCode}&startDateTime=${startDateTime}&city=${city}&classificationName=${classificationName}`);
   if (eventsByParams.data._embedded.events.length > 1) {
     dispatch(setAllByParams(eventsByParams.data._embedded.events))
-    console.log(eventsByParams.data._embedded.events);
   }
 }

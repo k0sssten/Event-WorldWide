@@ -17,7 +17,6 @@ function PersonalAreaEventlist() {
   const favouriteList = useSelector(state => state.favourite);
 
   const coordinates = favouriteList.map((item) => [item.Event.Category, item.Event.Genre, item.Event.Name])
-  // const titles = favouriteList.map((item) => item.Event.Name)
 
 
   const dispatch = useDispatch()
@@ -25,9 +24,6 @@ function PersonalAreaEventlist() {
   useEffect(() => {
     dispatch(getFavouriteEvents())
   }, [])
-
-  console.log(favouriteList)
-
   return (
 
     <>

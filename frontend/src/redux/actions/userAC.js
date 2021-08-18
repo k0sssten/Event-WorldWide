@@ -1,5 +1,4 @@
 import { ADD_USER, ADD_ID, DELETE_USER, DELETE_ID_USER, ADD_USER_AVATAR } from '../types/userTypes';
-import axios from 'axios';
 
 export const addUser = (user) => {
     return {
@@ -36,8 +35,6 @@ export const addUserAvatar = (avatar) => {
     };
 }
 
-
-
 export const getFormUserData = (userName, email, password, city, phone) => async (dispatch) => {
     const response = await fetch('http://localhost:3001/api/signup', {
         method: 'POST',
@@ -54,10 +51,7 @@ export const getFormUserData = (userName, email, password, city, phone) => async
         })
     })
     const data = await response.json()
-    // console.log('user --->>>', data.Name)
-
     dispatch(addUser(data))
-    // dispatch(addID(data.id))
 }
 
 export const getFormUserDataAuth = (email, password) => async (dispatch) => {
@@ -74,7 +68,6 @@ export const getFormUserDataAuth = (email, password) => async (dispatch) => {
     });
     const data = await response.json();
     dispatch(addUser(data));
-    // dispatch(addID(data.id));
 };
 
 export const saveUserDataPersonalArea = (userInfo) => async (dispatch) => {
@@ -89,7 +82,6 @@ export const saveUserDataPersonalArea = (userInfo) => async (dispatch) => {
     }),
   });
   const newUser = await response.json();
-  console.log(newUser)
   localStorage.id = newUser.id
     localStorage.Name = newUser.Name
     localStorage.email = newUser.email
@@ -101,8 +93,6 @@ export const saveUserDataPersonalArea = (userInfo) => async (dispatch) => {
   dispatch(addUser(newUser));
 };
 
-
-
 export const logout = (clearUser) => async (dispatch) => {
     const response = await fetch('http://localhost:3001/api/logout', {
         credentials: 'include',
@@ -110,9 +100,7 @@ export const logout = (clearUser) => async (dispatch) => {
     dispatch(deleteUser(clearUser));
     dispatch(deleteIdUser(clearUser));
     const status = await response.json();
-    console.log('server status --->>>', status)
     dispatch(deleteUser(clearUser));
 }
-
 
 export default { addUser, getFormUserData, logout };

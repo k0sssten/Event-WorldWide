@@ -45,10 +45,6 @@
     position: absolute;
 }
 
-/* .personalData_imgContent {
-    opacity: 0;
-} */
-
 .personalDat_updateImg  .updateImg{
     position: relative;
     width: 39px;
@@ -88,12 +84,6 @@
     border-radius: 50%;
     overflow: hidden;
 }
-
-
-/* .personalData_imgBg > img {
-  width: 100%;
-  height: 100%;
-} */
 
 .personalData_imgBg:hover > .personalDat_updateImg {
     transform: translateY(0);
@@ -246,10 +236,6 @@
     background-color: #0eafaa;
     color: #fff;
 }
-
-/* .blockPersonalDataEdit:hover {
-    background-color: #ffaa55;
-} */
 
 .personalAreaTitle {
     text-align: center;
