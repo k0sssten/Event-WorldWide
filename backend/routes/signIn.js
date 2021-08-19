@@ -6,7 +6,7 @@ const {User} = require('../db/models');
 router.route('/')
 .get((req, res) => {
   if (req.query.err) res.locals.err = 'Incorrect login or password';
-  res.send('123')
+  res.send('Incorrect login or password')
 })
 .post(async(req, res) => {
   const {email, password} = req.body;

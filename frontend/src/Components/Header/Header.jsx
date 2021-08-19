@@ -2,7 +2,6 @@ import style from './Header.module.css';
 import styleContainer from '../Container/container.module.css';
 import logo from './img/eww.png'
 import telegram from './img/telegram.png'
-
 import { useHistory, useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
@@ -10,7 +9,7 @@ import { logout } from '../../redux/actions/userAC';
 import { useEffect, useRef, useState } from 'react';
 
 function Header() {
- 
+
   const dispatch = useDispatch();
   const history = useHistory();
   const HomeButton = () => {
@@ -23,7 +22,6 @@ function Header() {
   const sandwitch_1 = useRef(null)
   const sandwitch_2 = useRef(null)
   const sandwitch_3 = useRef(null)
-
 
   const [menuNavBar, setmenuNavBar] = useState(false)
 
@@ -39,7 +37,6 @@ function Header() {
 
   const location = useLocation();
   useEffect(() => {}, [location]);
-
 
   const showNavbar = () => {
     if (menuNavBar === false) {
@@ -60,7 +57,6 @@ function Header() {
       setmenuNavBar(false)
     }
   }
-
   return (
     <>
       <header className={
@@ -82,7 +78,6 @@ function Header() {
                   </div>
                   <span className={style.logoText}>Event worldwide</span>
                 </Link>
-
               </li>
               <li className={style.headerMenuItem}>
                 {localStorage.Name ? (

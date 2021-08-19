@@ -17,7 +17,6 @@ router.route('/')
       const {
         Picture, Url, Name, Startdatetime, location
       } = req.body;
-      
       if (Picture && Url && Name && Startdatetime, location) {
         const newEvent = await db.Event.create(
           {
@@ -25,9 +24,7 @@ router.route('/')
           },
           { returning: true, plain: true },
         );
-        
         const newSubscribe = await db.Subscribe.create({ Eventid: newEvent.id },{ returning: true, plain: true })
-
         return res.status(201).json(newSubscribe);
       }
       return res.sendStatus(406);

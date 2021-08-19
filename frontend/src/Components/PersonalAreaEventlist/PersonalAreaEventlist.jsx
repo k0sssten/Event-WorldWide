@@ -1,11 +1,9 @@
-import { List, Avatar, Button } from 'antd';
 import 'antd/dist/antd.css';
 import { useSelector, useDispatch } from 'react-redux';
 import React, { useEffect } from 'react';
 import { getFavouriteEvents } from '../../redux/actions/favouriteAC';
 import PersonalAreaFavouriteItem from '../PersonalAreaFavouriteItem/PersonalAreaFavouriteItem'
 import YandexMap from '../YandexMap/YandexMap';
-
 import styleContainer from '../Container/container.module.css';
 import style from './PersonalAreaEventlist.module.css'
 import styleSignUp from '../SignUp/SignUp.module.css'
@@ -30,7 +28,6 @@ function PersonalAreaEventlist() {
       <div className={style.wrapperEvents}>
         <div className={styleContainer.container + ' ' + style.PersonalAreaEventlistContainer}>
           <h2 class={styleSignUp.HeaderformTop + ' ' + style.HeaderformTop}>Текущие события</h2>
-
           <div style={{ padding: '0 20px', borderTop: 'solid 1px #000', backgroundColor: '#fff' }}>
             {favouriteList.length ? favouriteList.map((item) => <PersonalAreaFavouriteItem
               key={item.id}
@@ -51,7 +48,6 @@ function PersonalAreaEventlist() {
       </div>
     </>
   );
-
 }
 
 export default PersonalAreaEventlist;

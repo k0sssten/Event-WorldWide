@@ -1,10 +1,7 @@
 import {
     ADD_USER,
-    ADD_ID,
     DELETE_USER,
-    DELETE_ID_USER,
 } from '../types/userTypes'
-
 import initState from '../initState'
 
 const userReducer = (state = initState, action) => {

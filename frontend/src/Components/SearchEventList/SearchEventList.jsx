@@ -1,5 +1,5 @@
-import { List, Avatar } from 'antd';
-import { useSelector, useDispatch } from 'react-redux';
+import { Avatar } from 'antd';
+import { useSelector } from 'react-redux';
 import SearchItem from '../SearchItem/SearchItem'
 function SearchEventList() {
   const eventList = useSelector((state) => state.eventfull);

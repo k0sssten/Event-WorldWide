@@ -1,6 +1,6 @@
 import { List, Avatar, Button } from 'antd';
 import { removeFavourite } from '../../redux/actions/favouriteAC'
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 function PersonalAreaFavouriteItem ({id, url, avatar, description, title}) {
   const dispatch = useDispatch()

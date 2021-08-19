@@ -1,5 +1,5 @@
-import { List, Avatar } from 'antd';
-import { useSelector, useDispatch } from 'react-redux';
+import { Avatar } from 'antd';
+import { useSelector } from 'react-redux';
 import QuickSearchItem from '../QuickSearchItem/QuickSearchItem'
 
 

@@ -1,7 +1,6 @@
 import { GET_EVENTS_QUICK } from "../types/eventquickTypes";
 import axios from "axios";
 
-
 export function setAllByKeyword(value) {
   return {
     type: GET_EVENTS_QUICK,

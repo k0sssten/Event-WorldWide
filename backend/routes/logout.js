@@ -5,7 +5,6 @@ router.route('/').get(async (req, res) => {
   req.session.destroy((err) => {
     if (err) return res.sendStatus(500);
     res.clearCookie(req.app.get('cookieName'));
-
     return res.sendStatus(200);
   });
 });

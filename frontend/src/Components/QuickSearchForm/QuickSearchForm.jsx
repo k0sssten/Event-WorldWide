@@ -2,11 +2,8 @@ import { Form, Input, Button } from 'antd';
 import { useDispatch } from 'react-redux';
 import { getEventsByKeyword } from '../../redux/actions/eventquick';
 
-
 const QuickSearchForm = () => {
   const dispatch = useDispatch()
-
-
 
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
@@ -14,9 +11,7 @@ const QuickSearchForm = () => {
 
   const submitHandler = (formData) => {
     dispatch(getEventsByKeyword(formData))
-    // придумать как очищать форму после отправки данных
   }
-
 
   return (
     <>
@@ -51,7 +46,6 @@ const QuickSearchForm = () => {
           </Button>
         </Form.Item>
       </Form>
-
     </>
   );
 };

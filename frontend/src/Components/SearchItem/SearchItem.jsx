@@ -1,6 +1,5 @@
 import { List, Avatar, Button } from 'antd';
-import { useRef } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addOneSubscribe } from '../../redux/actions/subscribeAC';
 
 
@@ -34,9 +33,7 @@ function SearchItem({ location, avatar, title, description, url, key, id }) {
             title={<a href={url}>{title}</a>}
             description={description}
           />
-
           <Button onClick={() => addSubscribe({ avatar, url, title, description, location })} on type="primary" shape="circle">+</Button>
-
         </List.Item>
         :
         <p>Download</p>

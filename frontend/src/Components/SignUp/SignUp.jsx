@@ -8,15 +8,12 @@ import { getFormUserData } from '../../redux/actions/userAC';
 function SignUp() {
     const dispatch = useDispatch()
     const history = useHistory();
-
     const selectCity = useRef(null)
-
     const [inputUser, setInputUser] = useState('')
     const [inputEmail, setInputEmail] = useState('')
     const [inputPassword, setInputPassword] = useState('')
     const [inputPhone, setInputPhone] = useState('')
     const user = useSelector(state => state.user.user)
-
 
     const inputHandlerName = (event) => {
         setInputUser(event.target.value)
@@ -30,7 +27,6 @@ function SignUp() {
     const inputHandlerPhone = (event) => {
         setInputPhone(event.target.value)
     }
-
     const HomeButton = () => {
         history.push("/");
     }
@@ -56,7 +52,6 @@ function SignUp() {
         HomeButton()
       }
     },[user]);
-
 
     return (
         <>

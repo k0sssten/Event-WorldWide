@@ -19,11 +19,11 @@ app.use(cors(
 }
 ));
 
+const {COOKIE_SECRET, COOKIE_NAME } = process.env;
 const userRouter = require('./routes/user');
 const signUpRouter = require('./routes/signUp')
 const signInRouter = require('./routes/signIn');
 const logoutRouter = require('./routes/logout');
-const {COOKIE_SECRET, COOKIE_NAME } = process.env;
 const subscribesRouter = require('./routes/subscribes.router')
 const uploadFileRouter = require('./routes/uploadFile');
 

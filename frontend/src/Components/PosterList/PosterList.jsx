@@ -6,8 +6,6 @@ import { getRandomEventPoster } from '../../redux/actions/posterAC';
 import Poster from '../Poster/Poster';
 import styleContainer from '../Container/container.module.css'
 
-
-
 function PosterList() {
 
   const posterList = useSelector(state => state.poster);
@@ -16,7 +14,6 @@ function PosterList() {
   useEffect(() => {
     dispatch(getRandomEventPoster())
   }, [])
-
 
   return (
     <div className={styleContainer.container}>

@@ -3,16 +3,11 @@ import {
   Form,
   Input,
   Button,
-  Radio,
   Select,
-  Cascader,
   DatePicker,
-  InputNumber,
-  TreeSelect,
-  Switch,
 } from 'antd';
-import { useDispatch, useSelector } from 'react-redux';
-import { getEventsByParams, setAllByParams } from '../../redux/actions/eventfull';
+import { useDispatch } from 'react-redux';
+import { getEventsByParams } from '../../redux/actions/eventfull';
 
 function SearchForm() {
   const [componentSize, setComponentSize] = useState('large');
@@ -46,14 +41,12 @@ function SearchForm() {
         onValuesChange={onFormLayoutChange}
         size={componentSize}
       >
-
         <Form.Item label="Страна" name='countryCode'>
           <Input />
         </Form.Item>
         <Form.Item label="Город" name='city'>
           <Input />
         </Form.Item>
-
         <Form.Item label="Категория" name='classificationName'>
           <Select>
             <Select.Option value="Sports">Спорт</Select.Option>
@@ -62,11 +55,9 @@ function SearchForm() {
             <Select.Option value="Miscellaneous">Разное</Select.Option>
           </Select>
         </Form.Item>
-
         <Form.Item label="Дата" name='startDateTime'>
           <DatePicker />
         </Form.Item>
-
         <Form.Item>
           <Button htmlType="submit">Найти</Button>
         </Form.Item>
